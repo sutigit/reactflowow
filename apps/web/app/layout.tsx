@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Funnel_Sans } from "next/font/google"
 import "./globals.css";
 import {
   NavigationMenu,
@@ -13,31 +13,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
 
-const poppins = localFont({
-  src: [
-    {
-      path: "./fonts/Poppins-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Poppins-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Poppins-SemiBold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Poppins-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-poppins",
-});
+const font = Funnel_Sans({ weight: ['300', '400', '600', '700', '800'] })
 
 export const metadata: Metadata = {
   title: "React Flow Extension Library",
@@ -51,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}`}>
+      <body className={font.className}>
         <nav className="h-16 flex items-center border-b">
           <div className="container mx-auto">
             <NavigationMenu>
