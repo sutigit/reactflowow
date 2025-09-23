@@ -1,9 +1,18 @@
-import React from 'react'
+'use client'
+import { useState, useCallback } from 'react';
+import { ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge, Background } from '@xyflow/react';
+import '@xyflow/react/dist/style.css';
+
 
 export default function Home() {
   return (
     <div className=''>
-      <section className='bg-zinc-200 h-[calc(100vh*(2/3))] '>
+      <section className='relative h-[calc(100vh*(2/3))] '>
+        <div className='absolute top-0 left-0 h-full w-full'>
+          <ReactFlow>
+            <Background />
+          </ReactFlow>
+        </div>
         <div className='container mx-auto pt-24'>
           <div className='max-w-96'>
             <h1 className='text-8xl font-bold mb-5'>React Flow<span className='text-orange-400 italic'>ow</span></h1>
