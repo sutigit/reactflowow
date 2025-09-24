@@ -1,9 +1,9 @@
 'use client'
 
 import { Button } from '@/components/ui/button';
-import { ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge, Background, Panel } from '@xyflow/react';
+import { ReactFlow, Background, Panel } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { Link2, Rocket, Search, SquareArrowOutUpRight } from 'lucide-react';
+import { Rocket } from 'lucide-react';
 import Link from 'next/link';
 import {
   Carousel,
@@ -81,6 +81,9 @@ export default function Home() {
       <section>
         <div className='container mx-auto py-10 flex justify-center'>
           <p className="text-xl">View node examples, copy to your code, and register in nodeTypes</p>
+          <div>
+
+          </div>
         </div>
       </section>
 
