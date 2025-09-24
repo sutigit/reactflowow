@@ -13,11 +13,11 @@ import {
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
 
-const font = Funnel_Sans({ weight: ['300', '400', '600', '700', '800'] })
+const font = Funnel_Sans({ subsets: ['latin'], weight: ['300', '400', '600', '700', '800'] })
 
 export const metadata: Metadata = {
-  title: "React Flow Extension Library",
-  description: "Component library for node-based the UI library - React Flow",
+  title: "React Flowow",
+  description: "A companion library for React Flow",
 };
 
 export default function RootLayout({
