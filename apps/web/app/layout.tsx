@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <nav className="h-16 flex items-center border-b">
+        <nav className="h-16 flex items-center border-b border-zinc-700">
           <div className="container mx-auto">
             <NavigationMenu>
               <NavigationMenuList>
