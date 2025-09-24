@@ -14,6 +14,20 @@ import {
 } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 
+const code = `
+function MyNode(name) {
+  return (
+    <Card >
+      <CardContent>
+        <p>Hello {name}</p>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default memo(MyNode)
+  `;
+
 export default function Home() {
   return (
     <main>
@@ -51,7 +65,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className='container mx-auto py-10'>
+        <div className='container mx-auto py-12'>
           <h3 className='text-3xl mb-5'>Nodes</h3>
           <Carousel
             opts={{
@@ -79,16 +93,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className='container mx-auto py-10 flex justify-center'>
-          <p className="text-xl">View node examples, copy to your code, and register in nodeTypes</p>
-          <div>
-
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className='container mx-auto py-10'>
+        <div className='container mx-auto py-12'>
           <h3 className='text-3xl mb-5'>Edges</h3>
           <Carousel
             opts={{
@@ -115,15 +120,8 @@ export default function Home() {
         </div>
       </section>
 
-
       <section>
-        <div className='container mx-auto py-10 flex justify-center'>
-          <p className="text-xl">View edge examples, copy to your code, and register in edgeTypes</p>
-        </div>
-      </section>
-
-      <section>
-        <div className='container mx-auto py-10'>
+        <div className='container mx-auto py-12'>
           <h3 className='text-3xl mb-5'>Utilities</h3>
           <Carousel
             opts={{
@@ -150,17 +148,10 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section>
-        <div className='container mx-auto py-10 flex justify-center'>
-          <p className="text-xl">View utilities examples, copy to your code, and use in your graph.</p>
-        </div>
-      </section>
-
       <footer className='bg-zinc-950 mt-40'>
         <div className='container mx-auto p-10'>Footer</div>
       </footer>
 
-    </main>
+    </main >
   )
 }
